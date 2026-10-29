@@ -3,71 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>itteki | Creators</title>
+<title>itteki | Eastern thought</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
 <style>
-/* ラムスの10か条に沿う: 有用 / 理解しやすい / 控えめ / 誠実 / 細部まで / 可能な限り少なく */
-:root{--bg:#e3e4e1;--ink:#202123;--sub:#7d7e7a;--line:#202123;--accent:#e8541a;
-  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171818;--ink:#e4e5e2;--sub:#7f807c;--line:#e4e5e2}}
-:root[data-theme="dark"]{--bg:#171818;--ink:#e4e5e2;--sub:#7f807c;--line:#e4e5e2}
+:root{--bg:#ede7da;--ink:#1f1e1b;--sub:#7a766c;--accent:#c23b22;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#181715;--ink:#e8e2d4;--sub:#8a857a}}
+:root[data-theme="dark"]{--bg:#181715;--ink:#e8e2d4;--sub:#8a857a}
 html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{height:100%;margin:0;background:var(--bg);color:var(--ink);overflow:hidden;
-  font-family:"Helvetica Neue",Helvetica,"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
-  -webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+body{height:100%;margin:0;background:var(--bg);color:var(--ink);overflow:hidden;font-family:"Cormorant Garamond","EB Garamond",Georgia,"Times New Roman",serif;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
 #c{position:fixed;inset:0;width:100%;height:100%;display:block}
 main{position:relative;height:100%;display:grid;grid-template-rows:auto 1fr;padding:22px 8vw 0;box-sizing:border-box;pointer-events:none}
-header{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.08em;color:var(--sub)}
-.hint{display:grid;place-content:center;justify-items:center;gap:14px;transition:opacity .8s ease}
-.hint i{width:12px;height:12px;border-radius:50%;background:var(--accent);display:block}
-.hint span{font-size:12px;letter-spacing:.12em;color:var(--sub)}
-.hint.off{opacity:0}
-.foot{position:fixed;left:8vw;right:8vw;bottom:calc(10px + env(safe-area-inset-bottom,0px));margin:0;font-size:10px;letter-spacing:.06em;line-height:1.6;color:var(--sub);transition:opacity 1.2s ease}
-.foot{opacity:0;transition-delay:.5s}
-.foot.on{opacity:1}
-.foot.sink{animation:sink 3.6s cubic-bezier(.45,0,.85,.4) forwards}
-.meta[hidden]{display:none}
 main.pre header,main.pre .hint{opacity:0}
-main header{transition:opacity 1.2s ease}
-#intro{position:fixed;inset:0;z-index:20;display:grid;place-content:center;justify-items:center;text-align:center;transition:opacity .9s ease}
-#intro.out{opacity:0;pointer-events:none}
-#intro .box{transform:translateY(-9vh);opacity:0;transition:opacity 1.3s ease}
-#intro.in .box{opacity:1}
-#intro.in.fade .box{opacity:0;transition-duration:1s}
-#intro h1{margin:0;font-weight:300;font-size:clamp(28px,8.4vw,46px);letter-spacing:.5em;padding-left:.5em}
-#intro p{margin:1.6em 0 0;font-size:12px;letter-spacing:.32em;padding-left:.32em;color:var(--sub)}
-#drop{display:block;position:absolute;left:50%;top:58%;width:10px;height:14px;margin:-7px 0 0 -5px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:var(--accent);opacity:0}
-article.note{font-size:clamp(15px,4.2vw,20px)}
-article.note #q{white-space:pre-line;line-height:1.9}
-article{position:fixed;left:0;top:0;visibility:hidden;width:max-content;max-width:min(22em,84vw);
-  font-size:clamp(20px,5.4vw,32px);pointer-events:none}
-#q{margin:0;font-size:1em;font-weight:300;line-height:1.75;letter-spacing:.04em;
-  word-break:auto-phrase;line-break:strict;text-wrap:pretty}
-.meta{margin-top:1.6em;display:grid;gap:.45em;font-size:16px}
-.meta p{margin:0}
-#who{font-size:14px;letter-spacing:.06em}
-#src{font-size:12px;letter-spacing:.06em;color:var(--sub);line-height:1.6}
+header{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.12em;color:var(--sub);transition:opacity 1.2s ease}
+.hint{display:grid;place-content:center;justify-items:center;gap:18px;transition:opacity .8s ease}
+.hint.off{opacity:0}
+.seal{display:block;width:18px;height:18px;border-radius:2px;background:var(--accent);color:var(--bg);font-style:normal;font-size:12px;line-height:18px;text-align:center}
+.hint span{font-size:14px;letter-spacing:.18em;color:var(--sub)}
+article{position:fixed;left:0;top:0;visibility:hidden;width:max-content;max-width:min(20em,84vw);font-size:clamp(22px,5.8vw,32px);pointer-events:none}
+#q{margin:0;font-weight:500;line-height:1.5;letter-spacing:.01em;white-space:pre-line}
+.meta{margin-top:1.5em;font-size:14px;color:var(--sub)}
+.meta p{margin:0;line-height:1.6;letter-spacing:.04em}
+#who{color:var(--ink);font-size:16px}
+#src{margin-top:.3em}
+article.note{font-size:clamp(18px,4.8vw,23px)}
+article.note #q{font-weight:500}
 .fade{opacity:0;transition:opacity 1.6s cubic-bezier(.2,.6,.2,1)}
 .meta.fade{transition-delay:.5s}
 .fade.on{opacity:1}
-/* 水の中へ沈む */
 @keyframes sink{0%{opacity:1;transform:translateY(0);filter:blur(0)}100%{opacity:0;transform:translateY(30px);filter:blur(9px)}}
 @keyframes soft{to{opacity:0}}
-article.sink{animation:sink 3.6s cubic-bezier(.45,0,.85,.4) forwards}
-@media (prefers-reduced-motion:reduce){.fade,.hint{transition:none}.meta.fade{transition-delay:0s}article.sink,.foot.sink{animation:soft 1.2s forwards}}
-/* English typography */
-#q{letter-spacing:.01em;line-height:1.6;word-break:normal;line-break:auto}
-#intro h1{letter-spacing:.35em;padding-left:.35em}
-#intro p{letter-spacing:.2em;padding-left:.2em}
+article.sink,.foot.sink{animation:sink 3.6s cubic-bezier(.45,0,.85,.4) forwards}
+.foot{position:fixed;left:8vw;right:8vw;bottom:calc(10px + env(safe-area-inset-bottom,0px));margin:0;font-size:10px;letter-spacing:.06em;line-height:1.6;color:var(--sub);opacity:0;transition:opacity 1.6s cubic-bezier(.2,.6,.2,1);transition-delay:.5s}
+.foot.on{opacity:1}
+#intro{position:fixed;inset:0;z-index:20;display:grid;place-content:center;justify-items:center;transition:opacity .9s ease}
+#intro.out{opacity:0;pointer-events:none}
+#intro .box{opacity:0;transition:opacity 1.3s ease;text-align:center}
+#intro.in .box{opacity:1}
+#intro.in.fade .box{opacity:0;transition-duration:1s}
+#intro h1{margin:0;font-weight:500;font-size:clamp(40px,12vw,64px);letter-spacing:.3em;padding-left:.3em}
+#intro p{margin:1.4em 0 0;font-size:13px;letter-spacing:.2em;padding-left:.2em;color:var(--sub)}
+#drop{display:block;position:absolute;left:50%;top:50%;width:10px;height:14px;margin:-7px 0 0 -5px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:var(--ink);opacity:0}
+@media (prefers-reduced-motion:reduce){.fade,.hint,.foot,header,#intro .box{transition:none}.meta.fade,.foot{transition-delay:0s}article.sink,.foot.sink{animation:soft 1.2s forwards}}
 </style>
 </head>
 <body>
 <canvas id="c" aria-hidden="true"></canvas>
 <main class="pre">
   <header><span>itteki</span><span id="date"></span></header>
-  <div class="hint" id="hint"><i></i><span>Touch the water</span></div>
+  <div class="hint" id="hint"><i class="seal">滴</i><span>Let a drop fall</span></div>
   <p class="foot">Words belong to their respective rights holders. Translations are unofficial.</p>
 </main>
-<div id="intro" aria-hidden="true"><div class="box"><h1>itteki</h1><p>Today’s word | Creators</p></div><i id="drop"></i></div>
+<div id="intro" aria-hidden="true"><div class="box"><h1>itteki</h1><p>Today’s word | Eastern thought</p></div><i id="drop"></i></div>
 <article id="art" aria-live="polite">
   <p id="q" class="fade"></p>
   <div class="meta fade" id="meta">
@@ -77,101 +66,81 @@ article.sink{animation:sink 3.6s cubic-bezier(.45,0,.85,.4) forwards}
 </article>
 <script>
 const Q=[
-{t:"Form ever follows function.",p:"Louis Sullivan",o:"“The Tall Office Building Artistically Considered” (1896)"},
-{t:"Good design is as little design as possible.",p:"Dieter Rams",o:"“Ten Principles of Good Design”"},
-{t:"Less is more.",p:"Ludwig Mies van der Rohe",o:"Introduced as Mies’s creed in Philip Johnson’s Mies van der Rohe (1947). The phrase itself predates him: Robert Browning, 1855"},
-{t:"You say to a brick, “What do you want, brick?” And brick says, “I like an arch.” You say, “Look, I want one, too, but arches are expensive, and I can use a concrete lintel.” And brick says, “I like an arch.”",p:"Louis Kahn",o:"What Will Be Has Always Been: The Words of Louis I. Kahn, ed. Richard Saul Wurman (Rizzoli, 1986). Abridged"},
-{t:"Complicating is easy; simplifying is hard. To simplify, you have to take away. And to take away, you have to know what to take away.",p:"Bruno Munari",o:"Verbale scritto (Il Melangolo, 1992; later Corraini edition). Translated from Italian"},
-{t:"The details are not the details. They make the product.",p:"Charles Eames",o:"From the product film ECS (Eames Contract Storage, 1961)"},
-{t:"Design is not a work of art. It is a tool for living each day with more care and richness.",p:"Naoto Fukasawa",o:"Works, Recruit Works Institute (2016). Translated from Japanese"},
-{t:"Simplicity is not an objective in art, but one achieves simplicity despite one’s self by entering into the real sense of things.",p:"Constantin Brâncuși",o:"Said to be from Propos (Brummer Gallery exhibition catalogue, 1926)"},
-{t:"Art does not reproduce the visible; it makes visible.",p:"Paul Klee",o:"“Creative Credo” (1920). Translated from German"},
-{t:"I can take any empty space and call it a bare stage.",p:"Peter Brook",o:"The Empty Space (1968), opening line"},
-{t:"Kept secret, it is the flower.",p:"Zeami",o:"Fūshi Kaden. Translated from Japanese"},
-{t:"Honor thy error as a hidden intention.",p:"Brian Eno & Peter Schmidt",o:"Oblique Strategies (1975)"},
-{t:"There is no such thing as silence. Something is always happening that makes a sound.",p:"John Cage",o:"Silence (1961), from “45′ for a Speaker”"},
-{t:"Just as people cannot live without clothes, a dish cannot stand on its own without tableware. You might say that tableware is the kimono of the dish.",p:"Kitaoji Rosanjin",o:"“Kinsaku Hachi no Kai ni Hitokoto” (A Word on the Recent Bowls Exhibition). Translated from Japanese"},
-{t:"Living is work; work is living.",p:"Kanjiro Kawai",o:"Inochi no Mado (Nishimura Shoten, 1948). Translated from Japanese"},
-{t:"Art is long, life is short.",p:"A maxim loved by Ryuichi Sakamoto",o:"From Shinchosha’s tribute. Originally an ancient Greek aphorism"},
-{t:"Like a child playing in the sand, you don’t picture what you’re going to make. As you tinker, it takes shape. That is creation, and for me, creation is play.",p:"Ryuichi Sakamoto",o:"POP SKMT (Demo Tape 2) (Myoon-ko, 2022). Translated from Japanese"},
-{t:"In my forties there was a time when I thought, “I’ve heard it all,” “I’m tired of it.” But that was a mistake. There is so much I don’t know. I have no business getting bored.",p:"Haruomi Hosono",o:"Real Sound (Nov 8, 2017). Translated from Japanese"},
-{t:"I want to do what I can do now, now. Something that can only be done in this era, at this time.",p:"Haruomi Hosono",o:"Sound & Recording Magazine (April 1993). Translated from Japanese"},
-{t:"The essence of sculpture is for me the perception of space, the continuum of our existence.",p:"Isamu Noguchi",o:"A Sculptor’s World (1968)"},
-{t:"I say it is the sculptor who orders and animates space, gives it meaning.",p:"Isamu Noguchi",o:"Fourteen Americans, The Museum of Modern Art (1946)"},
-{t:"For me it is the direct contact of artist to material which is original, and it is the earth and his contact to it which will free him of the artificiality of the present and his dependence on industrial products.",p:"Isamu Noguchi",o:"A Sculptor’s World (1968), said to be"},
-{t:"In my opinion to search means nothing in painting. To find is the thing.",p:"Pablo Picasso",o:"“Picasso Speaks,” The Arts, New York (May 1923), as told to Marius de Zayas"},
-{t:"At seventy-three I came, little by little, to understand the bones of birds, beasts, insects and fish, and how grasses and trees come into being.",p:"Katsushika Hokusai",o:"Afterword to Fugaku Hyakkei, vol. 1 (1834). Translated from Japanese"}
+{t:"Mind comes before all things, and mind makes the world.",p:"The Buddha",o:"Dhammapada (adapted translation)"},
+{t:"It is the emptiness inside a vessel that makes it useful.",p:"Laozi",o:"Tao Te Ching, ch. 11 (paraphrase)"},
+{t:"Am I dreaming of a butterfly, or is a butterfly dreaming of me?",p:"Zhuangzi",o:"Zhuangzi, “Qiwulun”"},
+{t:"To study the Buddha way is to study the self.",p:"Dōgen",o:"Shōbōgenzō, “Genjōkōan”"},
+{t:"The present moment is the only time in which we can touch life.",p:"Thich Nhat Hanh",o:""},
+{t:"A thousand days of practice to forge; ten thousand days to polish.",p:"Miyamoto Musashi",o:"The Book of Five Rings, Water"},
+{t:"The highest good is like water.",p:"Laozi",o:"Tao Te Ching, ch. 8"},
+{t:"To err and not to correct it: that is what is called an error.",p:"Confucius",o:"Analects, “Wei Ling Gong”"},
+{t:"All things are already within me.",p:"Mencius",o:"Mencius, “Jin Xin I”"},
+{t:"From the very beginning, all beings are Buddha.",p:"Hakuin Ekaku",o:"Song in Praise of Zazen"},
+{t:"Form is emptiness, emptiness is form.",p:"The Heart Sutra",o:""},
+{t:"Hatred is never calmed by hatred.",p:"The Buddha",o:"Dhammapada (adapted translation)"},
+{t:"The flowing river never stops, and yet the water is never the same.",p:"Kamo no Chōmei",o:"Hōjōki (opening)"},
+{t:"An old pond—\na frog jumps in,\nthe sound of water.",p:"Matsuo Bashō",o:"Haiku"},
+{t:"When disaster comes, it is best to meet it.",p:"Ryōkan",o:"Letter after the Sanjō earthquake, 1828"},
+{t:"Spring, flowers. Summer, the cuckoo. Autumn, the moon. Winter, snow—clear and cold.",p:"Dōgen",o:"Sanshō Dōei"}
 ];
 
-const SHOW_MS=8000;   // 言葉が現れてから沈み始めるまで
+const SHOW_MS=8000,SINK_MS=3600,NOTE_MS=6000,FREE=false,KEY="iee";
 // Up to 20 words: 8 seconds. Beyond that, add 1 second per 5 words
 const showMs=t=>SHOW_MS+Math.max(0,Math.ceil((t.trim().split(/\s+/).length-20)/5))*1000;
-const SINK_MS=3600;   // 沈んで消えるまで
-
 const $=id=>document.getElementById(id);
 const art=$("art"),q=$("q"),meta=$("meta"),hint=$("hint"),foot=document.querySelector(".foot");
-const d=new Date(),pad=n=>String(n).padStart(2,"0");
-$("date").textContent=d.getFullYear()+"."+pad(d.getMonth()+1)+"."+pad(d.getDate());
-
+const pad=n=>String(n).padStart(2,"0");
+const nowDay=()=>{const n=new Date();return n.getFullYear()+"-"+pad(n.getMonth()+1)+"-"+pad(n.getDate())};
+$("date").textContent=nowDay().replace(/-/g,".");
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-let cur=-1,busy=false;
 const after=(ms,fn)=>setTimeout(fn,ms);
-
-/* 水面: 触れた波紋 + 待機中のかすかな波紋と、湧き水の泡 */
-const c=$("c"),x=c.getContext("2d"),R=[],B=[];
-let W,H,col="#202123",colT=0;
 const rnd=(a,b)=>a+Math.random()*(b-a);
-const springs=[]; // 湧き水の場所（3か所）。開くたびに変わる
-let nextR=performance.now()+700,nextB=performance.now()+300;
+let cur=-1,busy=true,introOn=true;
+
+/* 落款の色: 朱・藍・苔・紫 */
+const ACC=[["#c23b22","#e0664d"],["#2f5c8a","#6fa0cf"],["#5c7a47","#8dae74"],["#6b4c8a","#a58ac6"]];
+let ai=-1;
+function isDark(){const t=document.documentElement.getAttribute("data-theme");return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+function accent(next){
+  if(next){let i;do{i=Math.floor(Math.random()*ACC.length)}while(i===ai);ai=i}
+  document.documentElement.style.setProperty("--accent",ACC[ai][isDark()?1:0]);
+}
+accent(true);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>accent());
+
+/* 墨: 滲みと波紋 */
+const c=$("c"),x=c.getContext("2d"),R=[];
+let W,H,inkRGB=[31,30,27],colT=0,nextA=performance.now()+1200,nextB=performance.now()+4000;
 function size(){const D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0)}
-// 中央の「水面に触れる」と、泡が昇る範囲には湧かせない
-function inZone(px,py){const cy=H/2+20;return Math.abs(px-W/2)<130&&py>cy-70&&py<cy+140}
-function farEnough(px,py,skip){return springs.every((s,i)=>i===skip||Math.hypot(s.fx*W-px,s.fy*H-py)>Math.min(W,H)*.22)}
-function pick(i){
-  for(let k=0;k<60;k++){
-    const fx=rnd(.1,.9),fy=rnd(.2,.88),px=fx*W,py=fy*H;
-    if(!inZone(px,py)&&farEnough(px,py,i)){springs[i]={fx,fy};return}
-  }
-  springs[i]={fx:[.15,.85,.5][i],fy:[.8,.78,.9][i]};
+size();addEventListener("resize",size);
+function hexRgb(h){h=h.replace("#","");if(h.length===3)h=h.split("").map(z=>z+z).join("");return [0,2,4].map(i=>parseInt(h.substr(i,2),16))}
+function wash(px,py,m,d,a){if(reduce)return;R.push({k:1,x:px,y:py,t:performance.now(),d:d,m:m,a:a})}
+function ring(px,py,n,o){
+  if(reduce)return;o=o||{};const t=performance.now();
+  for(let i=0;i<(n||3);i++)R.push({k:0,x:px,y:py,t:t+i*(o.gap||300),d:o.d||4200,m:o.m||Math.min(W,H)*.5,a:o.a||.4});
 }
-size();
-for(let i=0;i<3;i++)pick(i);
-addEventListener("resize",()=>{size();springs.forEach((s,i)=>{if(inZone(s.fx*W,s.fy*H))pick(i)})});
-function ripple(px,py,n,o){
-  if(reduce)return;
-  o=o||{};
-  const t=performance.now();
-  for(let i=0;i<(n||4);i++)R.push({x:px,y:py,t:t+i*(o.gap||240),m:o.m||Math.hypot(W,H)*.5,d:o.d||3600,a:o.a||.42});
-}
-function bubble(now){
-  const s=springs[(Math.random()*3)|0],sx=W*s.fx,sy=H*s.fy;
-  B.push({x:sx+rnd(-9,9),y:sy+rnd(-4,4),r:rnd(1.6,3.8),rise:rnd(26,70),t:now,d:rnd(3200,5600),ph:rnd(0,6.28)});
-  if(Math.random()<.5)ripple(sx,sy,1,{m:rnd(18,30),d:2400,a:.1});
-}
+function touchInk(px,py){wash(px,py,Math.min(W,H)*.42,6500,.2);ring(px,py,3,{m:Math.min(W,H)*.5,a:.35})}
 function frame(now){
   x.clearRect(0,0,W,H);
-  if(now-colT>500){col=getComputedStyle(document.documentElement).getPropertyValue("--line").trim()||"#202123";colT=now}
-  // 言葉が出ているあいだは、水面を静かにする
+  if(now-colT>500){const v=getComputedStyle(document.documentElement).getPropertyValue("--ink").trim()||"#1f1e1b";inkRGB=hexRgb(v);colT=now}
   if(!busy&&!document.hidden){
-    if(now>nextR){ripple(rnd(W*.08,W*.92),rnd(H*.15,H*.9),2,{m:rnd(70,150),d:rnd(3200,4600),a:.16,gap:380});nextR=now+rnd(2600,6400)}
-    if(now>nextB){bubble(now);nextB=now+rnd(450,1500)}
+    if(now>nextA){wash(rnd(W*.1,W*.9),rnd(H*.15,H*.9),rnd(70,150),rnd(6000,9000),.07);nextA=now+rnd(2800,6500)}
+    if(now>nextB){ring(rnd(W*.1,W*.9),rnd(H*.15,H*.9),2,{m:rnd(40,90),d:rnd(3200,4600),a:.14,gap:420});nextB=now+rnd(5000,10000)}
   }
-  x.strokeStyle=col;x.fillStyle=col;x.lineWidth=1;
+  const r=inkRGB[0],g=inkRGB[1],b=inkRGB[2];
   for(let i=R.length-1;i>=0;i--){
-    const r=R[i],a=(now-r.t)/r.d;
+    const o=R[i],a=(now-o.t)/o.d;
     if(a>=1){R.splice(i,1);continue}
     if(a<0)continue;
     const e=1-Math.pow(1-a,3);
-    x.globalAlpha=Math.pow(1-a,2)*r.a;
-    x.beginPath();x.arc(r.x,r.y,e*r.m,0,6.2832);x.stroke();
-  }
-  for(let i=B.length-1;i>=0;i--){
-    const b=B[i],a=(now-b.t)/b.d;
-    const px=b.x+Math.sin(a*6+b.ph)*3,py=b.y-a*b.rise;
-    if(a>=1){ripple(px,py,1,{m:rnd(14,26),d:2200,a:.14});B.splice(i,1);continue}
-    const env=Math.min(1,a*6)*Math.min(1,(1-a)*3);
-    x.globalAlpha=env*.5;x.beginPath();x.arc(px,py,b.r,0,6.2832);x.stroke();
-    x.globalAlpha=env*.4;x.beginPath();x.arc(px-b.r*.35,py-b.r*.35,Math.max(.5,b.r*.2),0,6.2832);x.fill();
+    if(o.k){
+      const rad=o.m*(.35+.65*e),gr=x.createRadialGradient(o.x,o.y,rad*.1,o.x,o.y,rad);
+      gr.addColorStop(0,"rgba("+r+","+g+","+b+",1)");gr.addColorStop(1,"rgba("+r+","+g+","+b+",0)");
+      x.globalAlpha=o.a*Math.pow(1-a,1.4);x.fillStyle=gr;x.beginPath();x.arc(o.x,o.y,rad,0,6.2832);x.fill();
+    }else{
+      x.globalAlpha=Math.pow(1-a,2)*o.a;x.strokeStyle="rgb("+r+","+g+","+b+")";x.lineWidth=1;
+      x.beginPath();x.arc(o.x,o.y,e*o.m,0,6.2832);x.stroke();
+    }
   }
   x.globalAlpha=1;
   requestAnimationFrame(frame);
@@ -181,19 +150,18 @@ if(!reduce)requestAnimationFrame(frame);
 /* 言葉 */
 function fill(i){
   const o=Q[i];cur=i;
-  q.textContent=o.t;
-  $("who").textContent=o.p;
-  $("src").textContent=o.o;
+  q.textContent=o.t;$("who").textContent=o.p;
+  const s=$("src");s.textContent=o.o;s.hidden=!o.o;
 }
-// 現れる場所は毎回ちがう
 function place(){
-  const w=art.offsetWidth,h=art.offsetHeight,mx=Math.max(20,W*.06),top0=72,bot=64;
+  const w=art.offsetWidth,h=art.offsetHeight,mx=Math.max(20,W*.06),top0=64,bot=64;
   art.style.left=(mx+Math.random()*Math.max(0,W-w-mx*2))+"px";
   art.style.top=(top0+Math.random()*Math.max(0,H-h-top0-bot))+"px";
 }
 function sink(){
   const r=art.getBoundingClientRect();
-  ripple(r.left+r.width/2,r.top+r.height/2,1);
+  wash(r.left+r.width/2,r.top+r.height/2,120,4200,.16);
+  ring(r.left+r.width/2,r.top+r.height/2,1,{m:90,d:3600,a:.3});
   art.classList.add("sink");
   if(foot.classList.contains("on"))foot.classList.add("sink");
   after(reduce?1200:SINK_MS,()=>{
@@ -205,10 +173,10 @@ function sink(){
   });
 }
 
-/* 全部出し切るまで同じ言葉は出ない（シャッフルした袋から引く。次に開いたときも続きから） */
+/* 全部出し切るまで同じ言葉は出ない */
 let bag=[];
 try{
-  const s=JSON.parse(localStorage.getItem("ite-bag")||"{}");
+  const s=JSON.parse(localStorage.getItem(KEY+"-bag")||"{}");
   if(Array.isArray(s.b))bag=s.b.filter(n=>Number.isInteger(n)&&n>=0&&n<Q.length);
   if(Number.isInteger(s.l)&&s.l>=0&&s.l<Q.length)cur=s.l;
 }catch(e){}
@@ -216,20 +184,16 @@ function nextIdx(){
   if(!bag.length){
     bag=Q.map((_,k)=>k);
     for(let k=bag.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[bag[k],bag[j]]=[bag[j],bag[k]]}
-    // 袋の切れ目で、直前と同じ言葉が続かないように
     if(bag.length>1&&bag[bag.length-1]===cur)[bag[0],bag[bag.length-1]]=[bag[bag.length-1],bag[0]];
   }
   const i=bag.pop();
-  try{localStorage.setItem("ite-bag",JSON.stringify({b:bag,l:i}))}catch(e){}
+  try{localStorage.setItem(KEY+"-bag",JSON.stringify({b:bag,l:i}))}catch(e){}
   return i;
 }
 
-/* 一日一回: 言葉との出会いは、日付が変わる（0時）までに1回。 */
-const FREE=false,DAY="ite-day",NOTE_MS=6000;
-function today(){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
-function nowDay(){const n=new Date();return n.getFullYear()+"-"+pad(n.getMonth()+1)+"-"+pad(n.getDate())}
-function locked(){if(FREE)return false;try{return localStorage.getItem(DAY)===nowDay()}catch(e){return false}}
-function markDrawn(){try{localStorage.setItem(DAY,nowDay())}catch(e){}}
+/* 一日一回（0時で切り替え） */
+function locked(){if(FREE)return false;try{return localStorage.getItem(KEY+"-day")===nowDay()}catch(e){return false}}
+function markDrawn(){try{localStorage.setItem(KEY+"-day",nowDay())}catch(e){}}
 function showNote(){
   busy=true;
   after(reduce?200:700,()=>{
@@ -241,10 +205,10 @@ function showNote(){
   });
 }
 
-/* 操作: 一期一会。触れるたびに、新しい言葉が出会いにくる */
+/* 操作 */
 function touch(px,py){
   if(introOn)return;
-  ripple(px,py);
+  touchInk(px,py);
   if(busy)return;
   if(locked()){showNote();return}
   busy=true;hint.classList.add("off");
@@ -257,27 +221,13 @@ function touch(px,py){
   });
 }
 addEventListener("pointerdown",e=>touch(e.clientX,e.clientY));
-addEventListener("keydown",e=>{
-  if(e.key==="Enter"||e.key===" "){e.preventDefault();touch(W/2,H*.45)}
-});
-/* 中心の点の色: 開いたときと、言葉が現れるたびに4色からランダムに変わる（テラコッタ／ブルーグレー／グリーングレー／パープルグレー） */
-const ACC=[["#b9654b","#d98a70"],["#4f86a8","#7fb0cc"],["#5f9a76","#8fbf9c"],["#7a6aa3","#a798cc"]];
-let ai=-1;
-function isDark(){const t=document.documentElement.getAttribute("data-theme");return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
-function accent(next){
-  if(next){let i;do{i=Math.floor(Math.random()*ACC.length)}while(i===ai);ai=i}
-  document.documentElement.style.setProperty("--accent",ACC[ai][isDark()?1:0]);
-}
-accent(true);
-matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>accent());
+addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();touch(W/2,H*.45)}});
 if(locked())hint.classList.add("off");
 
-/* オープニング: いってき → 一滴が落ちて波紋 → 本画面（タップでスキップ） */
-let introOn=true;
+/* オープニング: 墨が一滴落ちて滲む → いってき → 本画面（タップでスキップ） */
 (function(){
   const intro=$("intro"),drop=$("drop"),mainEl=document.querySelector("main");
   let done=false,anim=null;
-  busy=true;
   function end(){
     if(done)return;done=true;
     if(anim)anim.cancel();
@@ -286,24 +236,25 @@ let introOn=true;
     after(900,()=>{intro.remove();introOn=false;busy=false});
   }
   intro.addEventListener("pointerdown",end);
-  after(300,()=>intro.classList.add("in"));
-  if(reduce){after(2200,end);return}
-  after(1900,()=>{
+  if(reduce){after(300,()=>intro.classList.add("in"));after(2400,end);return}
+  after(500,()=>{
     if(done)return;
     anim=drop.animate([
-      {transform:"translateY("+(-H*.55)+"px) scaleY(1.5)",opacity:0},
+      {transform:"translateY("+(-H*.5)+"px) scaleY(1.5)",opacity:0},
       {opacity:1,offset:.14},
       {transform:"translateY(0) scaleY(1.2)",opacity:1}
     ],{duration:900,easing:"cubic-bezier(.55,0,.9,.55)",fill:"forwards"});
   });
-  after(2800,()=>{
+  after(1400,()=>{
     if(done)return;
     if(anim)anim.cancel();
     drop.style.opacity=0;
-    ripple(W/2,H*.58,5,{m:Math.max(W,H)*.6,d:4800,a:.5,gap:320});
+    wash(W/2,H*.5,Math.min(W,H)*.62,7000,.24);
+    ring(W/2,H*.5,4,{m:Math.max(W,H)*.55,d:5200,a:.4,gap:360});
   });
-  after(3700,()=>{if(!done)intro.classList.add("fade")});
-  after(4600,end);
+  after(1900,()=>{if(!done)intro.classList.add("in")});
+  after(4600,()=>{if(!done)intro.classList.add("fade")});
+  after(5500,end);
 })();
 </script>
 </body>
